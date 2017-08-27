@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% I, the copyright holder of this work, release this work into the
+%% public domain. This applies worldwide. In some countries this may
+%% not be legally possible; if so: I grant anyone the right to use
+%% this work for any purpose, without any conditions, unless such
+%% conditions are required by law.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+\usetheme[logo=autobotz_logo.png]{fibeamer}
+\usepackage[utf8]{inputenc}
+\usepackage[
+  english, %% By using `czech` or `slovak` as the main locale
+                %% instead of `english`, you can typeset the
+                %% presentation in either Czech or Slovak,
+                %% respectively.
+  czech, slovak, main=brazilian %% The additional keys allow foreign texts to be
+]{babel}        %% typeset as follows:
+%%
+%%   \begin{otherlanguage}{czech}   ... \end{otherlanguage}
+%%   \begin{otherlanguage}{slovak}  ... \end{otherlanguage}
+%%
+%% These macros specify information about the presentation
+\title{Título do projeto} %% that will be typeset on the
+\subtitle{Subtítulo} %% title page.
+\author{Autoras(es)}
+%% These additional packages are used within the document:
+\usepackage{ragged2e}  % `\justifying` text
+\usepackage{booktabs}  % Tables
+\usepackage{tabularx}
+\usepackage{tikz}      % Diagrams
+\usetikzlibrary{calc, shapes, backgrounds}
+\usepackage{amsmath, amssymb}
+\usepackage{url}       % `\url`s
+\usepackage{listings}  % Code listings
+\frenchspacing
+
+\begin{document}
+\begin{otherlanguage}{brazilian}
+  \frame{\maketitle}
+
+  \AtBeginSection[]{% Print an outline at the beginning of sections
+    \begin{frame}<beamer>
+      \frametitle{Índice da \thesectionª sessão}
+      \tableofcontents[currentsection]
+    \end{frame}}
+\begin{darkframes}
+
+  \section{1.0 Título}
+  
+	\subsection{1.1 Título}
+	  \begin{frame}{Título do slide}
+      \framesubtitle{Subtítulo}
+        \begin{columns}[onlytextwidth]
+          \column{\textwidth}
+            \begin{itemize}
+            \item lista
+            \end{itemize}
+        \end{columns}  
+      \end{frame}
+      
+      \subsection{2.2 Título}
+        \begin{frame}{Título do slide}
+      	  \framesubtitle{Subtítulo}
+
+       \section{2.0 Título}
+
+  \end{darkframes}
+
+    
+\end{otherlanguage}
+\end{document}
